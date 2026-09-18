@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - name: Checkout private engine
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Set up Node.js
@@ -27,29 +27,52 @@ jobs:
           node-version: "20"
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          elif [ -f package.json ]; then
+            npm install
+          else
+            echo "No package.json found - no dependencies to install."
+          fi
 
       - name: Run migration engine
-        run: npm run update
-
-      - name: Check generated output
         run: |
-          test -f output/latest.json
+          if [ -f package.json ] && npm run | grep -q "update"; then
+            npm run update
+          elif [ -f src/update.mjs ]; then
+            node src/update.mjs
+          elif [ -f scripts/update.mjs ]; then
+            node scripts/update.mjs
+          else
+            echo "ERROR: Migration engine not found."
+            exit 1
+          fi
+
+      - name: Validate generated output
+        run: |
+          if [ ! -f output/latest.json ]; then
+            echo "ERROR: output/latest.json was not generated."
+            exit 1
+          fi
+
           node -e "
             const fs = require('fs');
-            const data = JSON.parse(fs.readFileSync('output/latest.json', 'utf8'));
+            const data = JSON.parse(
+              fs.readFileSync('output/latest.json', 'utf8')
+            );
 
-            if (!data || typeof data !== 'object') {
-              throw new Error('latest.json is not a valid object');
+            if (!data || typeof data !== 'object' || Array.isArray(data)) {
+              throw new Error('output/latest.json is not a valid JSON object');
             }
 
-            console.log('Migration output validated.');
+            console.log('output/latest.json is valid.');
           "
 
       - name: Commit updated data
         run: |
           if git diff --quiet -- output/latest.json; then
-            echo "No data changes."
+            echo "No data changes to commit."
             exit 0
           fi
 
