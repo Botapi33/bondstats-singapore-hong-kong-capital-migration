@@ -1,17 +1,78 @@
 {
   "schema": "bondstats-capital-migration-v1",
-  "generated_at": null,
-  "as_of": null,
+  "generated_at": "2026-09-18T13:08:27.510Z",
+  "as_of": "2026-08",
   "singapore_score": null,
   "hong_kong_score": null,
   "confidence": 0,
   "coverage": 0,
   "verdict": {
-    "label": "Awaiting first official-data sync",
-    "note": "The automated engine will publish only after valid source observations are retrieved."
+    "label": "Insufficient evidence",
+    "note": "Available official series do not yet support a multi-channel directional conclusion."
   },
-  "channels": {},
-  "tests": [],
-  "raw": {},
-  "history": []
+  "channels": {
+    "banking": {
+      "score": null,
+      "label": "Unavailable",
+      "detail": "Official observation unavailable"
+    },
+    "crossborder": {
+      "score": null,
+      "label": "Unavailable",
+      "detail": "Official observation unavailable"
+    },
+    "persistence": {
+      "label": "Unconfirmed",
+      "detail": "12m comparison unavailable"
+    },
+    "confidence": {
+      "label": "0%",
+      "detail": "0/4 tests available"
+    }
+  },
+  "tests": [
+    {
+      "label": "Unavailable",
+      "class": "neutral"
+    },
+    {
+      "label": "Unavailable",
+      "class": "neutral"
+    },
+    {
+      "label": "Not confirmed",
+      "class": "neutral"
+    },
+    {
+      "label": "Channels do not agree",
+      "class": "neutral"
+    }
+  ],
+  "raw": {
+    "sg_banking_3m": 0.360506086748158,
+    "hk_banking_3m": null,
+    "sg_crossborder_3m": null,
+    "hk_crossborder_3m": -100,
+    "relative_banking_3m": null,
+    "relative_banking_12m": null,
+    "relative_crossborder_3m": null
+  },
+  "history": [],
+  "sources": {
+    "singapore": {
+      "provider": "Singapore Department of Statistics / Monetary Authority of Singapore",
+      "dataset": "d_f357c61441e2850ca4eae05813ebd37b",
+      "banking_series": "matched deposits series",
+      "crossborder_series": "unavailable"
+    },
+    "hong_kong": {
+      "provider": "Hong Kong Monetary Authority",
+      "endpoint": "banking-statistics"
+    },
+    "bis": {
+      "provider": "Bank for International Settlements",
+      "dataset": "Locational banking statistics",
+      "role": "methodological cross-check"
+    }
+  }
 }
