@@ -1,0 +1,17 @@
+{
+  "schema": "bondstats-capital-migration-v1",
+  "generated_at": null,
+  "as_of": null,
+  "singapore_score": null,
+  "hong_kong_score": null,
+  "confidence": 0,
+  "coverage": 0,
+  "verdict": {
+    "label": "Awaiting first official-data sync",
+    "note": "The automated engine will publish only after valid source observations are retrieved."
+  },
+  "channels": {},
+  "tests": [],
+  "raw": {},
+  "history": []
+}

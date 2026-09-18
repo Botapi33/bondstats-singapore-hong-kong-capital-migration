@@ -1,0 +1,13 @@
+{
+  "name": "bondstats-singapore-hong-kong-capital-migration",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "update": "node src/update.mjs",
+    "check": "node --check src/update.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
