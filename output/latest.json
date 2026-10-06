@@ -1,9 +1,9 @@
 {
   "schema": "bondstats-capital-migration-v2",
-  "generated_at": "2026-10-05T14:42:32.209Z",
-  "as_of": "2026-06",
-  "singapore_score": 36,
-  "hong_kong_score": 64,
+  "generated_at": "2026-10-06T13:19:54.945Z",
+  "as_of": "2026-07",
+  "singapore_score": 46,
+  "hong_kong_score": 54,
   "confidence": 100,
   "coverage": 4,
   "verdict": {
@@ -12,18 +12,18 @@
   },
   "channels": {
     "banking": {
-      "score": -0.7955086441458925,
+      "score": -0.4617359401766552,
       "label": "Hong Kong stronger",
-      "detail": "relative 3m momentum -3.18 pp"
+      "detail": "relative 3m momentum -1.85 pp"
     },
     "crossborder": {
-      "score": -0.0020898026407145665,
-      "label": "Near balance",
-      "detail": "relative 3m momentum -0.01 pp"
+      "score": 0.25047484497537353,
+      "label": "Singapore stronger",
+      "detail": "relative 3m momentum +1.00 pp"
     },
     "persistence": {
       "label": "Unconfirmed",
-      "detail": "12m relative momentum: banking -2.80 pp; cross-border +3.19 pp"
+      "detail": "12m relative momentum: banking -3.41 pp; cross-border +2.74 pp"
     },
     "confidence": {
       "label": "100%",
@@ -36,8 +36,8 @@
       "class": "negative"
     },
     {
-      "label": "No clear divergence",
-      "class": "neutral"
+      "label": "Singapore confirmation",
+      "class": "positive"
     },
     {
       "label": "Not confirmed across windows",
@@ -50,19 +50,15 @@
   ],
   "raw": {
     "sg_banking_3m": 1.124320925314648,
-    "hk_banking_3m": 4.306355501898218,
+    "hk_banking_3m": 2.971264686021269,
     "sg_crossborder_3m": 6.204327267516829,
-    "hk_crossborder_3m": 6.2126864780796875,
-    "relative_banking_3m": -3.18203457658357,
-    "relative_banking_12m": -2.801366905254943,
-    "relative_crossborder_3m": -0.008359210562858266,
-    "relative_crossborder_12m": 3.1910856548220448
+    "hk_crossborder_3m": 5.202427887615335,
+    "relative_banking_3m": -1.8469437607066208,
+    "relative_banking_12m": -3.4080118624288716,
+    "relative_crossborder_3m": 1.0018993799014941,
+    "relative_crossborder_12m": 2.7431213767328266
   },
   "history": [
-    {
-      "period": "2025-09",
-      "score": 68
-    },
     {
       "period": "2025-10",
       "score": 62
