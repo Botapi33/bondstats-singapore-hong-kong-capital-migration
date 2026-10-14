@@ -1,6 +1,6 @@
 {
   "schema": "bondstats-capital-migration-v2",
-  "generated_at": "2026-10-13T14:13:45.446Z",
+  "generated_at": "2026-10-14T11:54:47.729Z",
   "as_of": "2026-07",
   "singapore_score": 46,
   "hong_kong_score": 54,
@@ -12,18 +12,18 @@
   },
   "channels": {
     "banking": {
-      "score": -0.4617359401766552,
+      "score": -0.39043415087907096,
       "label": "Hong Kong stronger",
-      "detail": "relative 3m momentum -1.85 pp"
+      "detail": "relative 3m momentum -1.56 pp"
     },
     "crossborder": {
-      "score": 0.25047484497537353,
+      "score": 0.1400769646810962,
       "label": "Singapore stronger",
-      "detail": "relative 3m momentum +1.00 pp"
+      "detail": "relative 3m momentum +0.56 pp"
     },
     "persistence": {
       "label": "Unconfirmed",
-      "detail": "12m relative momentum: banking -3.41 pp; cross-border +2.74 pp"
+      "detail": "12m relative momentum: banking -1.63 pp; cross-border +6.08 pp"
     },
     "confidence": {
       "label": "100%",
@@ -49,14 +49,14 @@
     }
   ],
   "raw": {
-    "sg_banking_3m": 1.124320925314648,
+    "sg_banking_3m": 1.409528082504985,
     "hk_banking_3m": 2.971264686021269,
-    "sg_crossborder_3m": 6.204327267516829,
+    "sg_crossborder_3m": 5.76273574633972,
     "hk_crossborder_3m": 5.202427887615335,
-    "relative_banking_3m": -1.8469437607066208,
-    "relative_banking_12m": -3.4080118624288716,
-    "relative_crossborder_3m": 1.0018993799014941,
-    "relative_crossborder_12m": 2.7431213767328266
+    "relative_banking_3m": -1.5617366035162839,
+    "relative_banking_12m": -1.6277778729693715,
+    "relative_crossborder_3m": 0.5603078587243848,
+    "relative_crossborder_12m": 6.076636559729586
   },
   "history": [
     {
@@ -98,6 +98,10 @@
     {
       "period": "2026-07",
       "score": 22
+    },
+    {
+      "period": "2026-08",
+      "score": 36
     }
   ],
   "sources": {
